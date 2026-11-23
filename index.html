@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Social Proxy</title>
+  <link rel="icon" id="tabIcon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="shell">
+    <div class="mark">SP</div>
+    <p class="eyebrow">PRIVATE WEB GATEWAY</p>
+    <h1>Browse through<br><span>your proxy.</span></h1>
+    <p class="sub">A small, self-hosted gateway for approved YouTube and TikTok URLs.</p>
+    <form id="proxyForm">
+      <label for="url">Paste a YouTube or TikTok URL</label>
+      <div class="inputrow">
+        <input id="url" type="url" placeholder="https://www.youtube.com/" required>
+        <button type="submit">Go <span>↗</span></button>
+      </div>
+    </form>
+    <div class="cloak">
+      <div>
+        <strong>Disguise this tab</strong>
+        <small>Change the tab title and icon to resemble Google Slides.</small>
+      </div>
+      <label class="switch" aria-label="Disguise tab as Google Slides">
+        <input id="cloakToggle" type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="shortcuts">
+      <button type="button" data-url="https://www.youtube.com/">YouTube</button>
+      <button type="button" data-url="https://www.tiktok.com/">TikTok</button>
+    </div>
+    <p id="error" role="status"></p>
+    <p class="note">This starter forwards HTTP requests. Modern video sites may not fully work because their apps rely on streaming, scripts, cookies, anti-bot checks and other domains.</p>
+    <footer>Only use where you have permission. Do not enter passwords or personal information.</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
